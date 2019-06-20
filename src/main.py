@@ -3,19 +3,27 @@ import torch
 import logging
 import random
 import numpy as np
+import os
+import sys
 
-from utils.config import Config
-from utils.visualization.plot_images_grid import plot_images_grid
-from deepSVDD import DeepSVDD
-from datasets.main import load_dataset
+
+PROJECT_PATH = os.path.abspath(
+    os.path.join(os.path.dirname(__file__), '..'))
+sys.path.append(PROJECT_PATH)
+
+
+from src.utils.config import Config
+from src.utils.visualization.plot_images_grid import plot_images_grid
+from src.deepSVDD import DeepSVDD
+from src.datasets.main import load_dataset
 
 
 ################################################################################
 # Settings
 ################################################################################
 @click.command()
-@click.argument('dataset_name', type=click.Choice(['mnist', 'cifar10']))
-@click.argument('net_name', type=click.Choice(['mnist_LeNet', 'cifar10_LeNet']))
+@click.argument('dataset_name', type=click.Choice(['hits', 'mnist', 'cifar10']))
+@click.argument('net_name', type=click.Choice(['hits_LeNet', 'mnist_LeNet', 'cifar10_LeNet']))
 @click.argument('xp_path', type=click.Path(exists=True))
 @click.argument('data_path', type=click.Path(exists=True))
 @click.option('--load_config', type=click.Path(exists=True), default=None,
@@ -169,9 +177,9 @@ def main(dataset_name, net_name, xp_path, data_path, load_config, load_model, ob
     indices, labels, scores = np.array(indices), np.array(labels), np.array(scores)
     idx_sorted = indices[labels == 0][np.argsort(scores[labels == 0])]  # sorted from lowest to highest anomaly score
 
-    if dataset_name in ('mnist', 'cifar10'):
+    if dataset_name in ('hits', 'mnist', 'cifar10'):
 
-        if dataset_name == 'mnist':
+        if dataset_name == 'mnist' or dataset_name == 'hits':
             X_normals = dataset.test_set.test_data[idx_sorted[:32], ...].unsqueeze(1)
             X_outliers = dataset.test_set.test_data[idx_sorted[-32:], ...].unsqueeze(1)
 

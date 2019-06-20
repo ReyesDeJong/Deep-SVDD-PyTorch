@@ -4,6 +4,30 @@ __pycache__/
 *$py.class
 *.p
 *.pkl
+*.gz
+
+*.ipynb_checkpoints
+*.pyc
+*.idea
+
+results
+logs
+dataset
+datasets
+DataSet
+DataSets
+
+*.npy
+*.npz
+*.csv
+*.jpg
+*.jpeg
+*.png
+*.svg
+*.mp4
+*.pkl
+*.pickle
+
 
 # C extensions
 *.so
@@ -12,6 +36,7 @@ __pycache__/
 .Python
 env/
 venv/
+data/
 build/
 develop-eggs/
 dist/

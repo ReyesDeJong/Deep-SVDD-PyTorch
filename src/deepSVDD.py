@@ -1,10 +1,17 @@
 import json
 import torch
+import os
+import sys
 
-from base.base_dataset import BaseADDataset
-from networks.main import build_network, build_autoencoder
-from optim.deepSVDD_trainer import DeepSVDDTrainer
-from optim.ae_trainer import AETrainer
+
+PROJECT_PATH = os.path.abspath(
+    os.path.join(os.path.dirname(__file__), '..', '..'))
+sys.path.append(PROJECT_PATH)
+
+from src.base.base_dataset import BaseADDataset
+from src.networks.main import build_network, build_autoencoder
+from src.optim.deepSVDD_trainer import DeepSVDDTrainer
+from src.optim.ae_trainer import AETrainer
 
 
 class DeepSVDD(object):
