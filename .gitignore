@@ -10,12 +10,12 @@ __pycache__/
 *.pyc
 *.idea
 
-results
-logs
-dataset
-datasets
-DataSet
-DataSets
+results/
+logs/
+dataset/
+datasets/
+DataSet/
+DataSets/
 
 *.npy
 *.npz
