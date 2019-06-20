@@ -1,9 +1,6 @@
-import click
-import torch
 import logging
-import random
-import numpy as np
 import os
+import random
 import sys
 
 import numpy as np
@@ -148,9 +145,22 @@ def main(dataset_name, net_name, xp_path, data_path, load_config, load_model,
   idx_sorted = indices[labels == 0][np.argsort(
       scores[labels == 0])]  # sorted from lowest to highest anomaly score
 
+  # Save results, model, and configuration
+  deep_SVDD.save_results(export_json=xp_path + '/results.json')
+  deep_SVDD.save_model(export_model=xp_path + '/model.tar')
+  cfg.save_config(export_json=xp_path + '/config.json')
+
   if dataset_name in ('hits', 'mnist', 'cifar10'):
 
-    if dataset_name == 'mnist' or dataset_name == 'hits':
+    if dataset_name == 'hits':
+      X_normals = torch.tensor(
+        np.transpose(dataset.test_set.image_arr[idx_sorted[:32], ...],
+                     (0, 3, 1, 2)))
+      X_outliers = torch.tensor(
+        np.transpose(dataset.test_set.image_arr[idx_sorted[-32:], ...],
+                     (0, 3, 1, 2)))
+
+    if dataset_name == 'mnist':
       X_normals = dataset.test_set.test_data[idx_sorted[:32], ...].unsqueeze(1)
       X_outliers = dataset.test_set.test_data[idx_sorted[-32:], ...].unsqueeze(
           1)
@@ -168,13 +178,9 @@ def main(dataset_name, net_name, xp_path, data_path, load_config, load_model,
     plot_images_grid(X_outliers, export_img=xp_path + '/outliers',
                      title='Most anomalous examples', padding=2)
 
-  # Save results, model, and configuration
-  deep_SVDD.save_results(export_json=xp_path + '/results.json')
-  deep_SVDD.save_model(export_model=xp_path + '/model.tar')
-  cfg.save_config(export_json=xp_path + '/config.json')
-
 
 if __name__ == '__main__':
+  #when epochs = 2, good results
   params = {
     'dataset_name': 'hits',
     'net_name': 'hits_LeNet',
