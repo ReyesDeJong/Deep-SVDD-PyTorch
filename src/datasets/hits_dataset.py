@@ -3,7 +3,6 @@ import sys
 
 import numpy as np
 import pandas as pd
-from sklearn.model_selection import train_test_split
 from torch.utils.data import Subset
 from torch.utils.data.dataset import Dataset  # For custom datasets
 from torchvision import transforms
@@ -14,6 +13,8 @@ sys.path.append(PROJECT_PATH)
 
 from src.base.torchvision_dataset import TorchvisionDataset
 from src.datasets.preprocessing import get_target_label_idx
+from src.datasets.data_splitter import DatasetDivider
+from src.datasets.data_set_generic import Dataset
 
 
 class HitsDataset(TorchvisionDataset):
@@ -31,21 +32,33 @@ class HitsDataset(TorchvisionDataset):
       ..., np.newaxis]
     labels = np.array(self.data_dict['labels'])
 
-    train_array, test_array, train_labels, test_labels = train_test_split(
-        images, labels, test_size=0.3, random_state=42)
+    dataset = Dataset(data_array=images, data_label=labels, batch_size=50)
+    data_splitter = DatasetDivider(test_size=0.3, validation_size=0.1)
+    data_splitter.set_dataset_obj(dataset)
+    train_dataset, test_dataset, val_dataset = \
+      data_splitter.get_train_test_val_set_objs()
 
     transform = transforms.Compose([transforms.ToTensor()])
-
     target_transform = transforms.Lambda(
         lambda x: int(x in self.outlier_classes))
 
-    train_set = Hits(train_array, train_labels, transform=transform,
-                     target_transform=target_transform)
+    train_set = Hits(train_dataset.data_array, train_dataset.data_label,
+                     transform=transform, target_transform=target_transform)
     train_idx_normal = get_target_label_idx(
         np.array(train_set.label_arr), self.normal_classes)
     self.train_set = Subset(train_set, train_idx_normal)
     print(self.train_set.__len__())
-    self.test_set = Hits(test_array, test_labels, transform=transform,
+
+    self.val_all_set = Hits(val_dataset.data_array, val_dataset.data_label,
+                            transform=transform,
+                            target_transform=target_transform)
+    val_idx_normal = get_target_label_idx(
+        np.array(self.val_all_set_set.label_arr), self.normal_classes)
+    self.val_normal_set = Subset(self.val_all_set, val_idx_normal)
+    print(self.val_normal_set.__len__())
+
+    self.test_set = Hits(test_dataset.data_array, test_dataset.data_label,
+                         transform=transform,
                          target_transform=target_transform)
 
   def normalize_by_image(self, images):

@@ -68,6 +68,8 @@ class DeepSVDDTrainer(BaseTrainer):
         logger.info('Starting training...')
         start_time = time.time()
         net.train()
+        self.best_metric = 0 #accuracy:0, loss:1e100
+        self.it = 0
         for epoch in range(self.n_epochs):
 
             scheduler.step()

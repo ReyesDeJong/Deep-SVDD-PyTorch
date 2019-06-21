@@ -111,7 +111,7 @@ def plot_threshold_acc(inliers_score, outliers_score, save_path=None,
   min = np.min(np.concatenate([inliers_score, outliers_score]))
   max = np.max(np.concatenate([inliers_score, outliers_score]))
 
-  n_bins = 100
+  n_bins = 1000
   bin_val_inlier, bins_inlier, _ = plt.hist(inliers_score, n_bins,
                                             histtype='step', lw=2,
                                             label='inlier %s' % set,
@@ -139,7 +139,7 @@ def plot_threshold_acc(inliers_score, outliers_score, save_path=None,
   ax.plot(thresholds, accuracies, lw=2, label='Accuracy by thresholds',
           color='black')
   ax.yaxis.set_major_locator(ticker.MultipleLocator(0.1))
-  ax.xaxis.set_major_locator(ticker.MultipleLocator(0.5))
+  # ax.xaxis.set_major_locator(ticker.MultipleLocator(0.5))
 
   ax.legend()
   ax.set_ylim([0, 1.0])

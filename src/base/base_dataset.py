@@ -16,6 +16,9 @@ class BaseADDataset(ABC):
         self.train_set = None  # must be of type torch.utils.data.Dataset
         self.test_set = None  # must be of type torch.utils.data.Dataset
 
+        self.val_all_set = None
+        self.val_normal_set = None
+
     @abstractmethod
     def loaders(self, batch_size: int, shuffle_train=True, shuffle_test=False, num_workers: int = 0) -> (
             DataLoader, DataLoader):
