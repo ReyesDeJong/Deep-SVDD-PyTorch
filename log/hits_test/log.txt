@@ -1155,3 +1155,152 @@
 2019-06-20 18:00:44,167 - root - INFO - Testing time: 1.387
 2019-06-20 18:00:44,243 - root - INFO - Test set AUC: 69.61%
 2019-06-20 18:00:44,243 - root - INFO - Finished testing.
+2019-06-21 11:47:17,947 - root - INFO - Log file is ../log/hits_test/log.txt.
+2019-06-21 11:47:17,947 - root - INFO - Data path is ../../datasets/HiTS2013_300k_samples.pkl.
+2019-06-21 11:47:17,947 - root - INFO - Export path is ../log/hits_test.
+2019-06-21 11:47:17,947 - root - INFO - Dataset: hits
+2019-06-21 11:47:17,947 - root - INFO - Normal class: 1
+2019-06-21 11:47:17,947 - root - INFO - Network: hits_LeNet
+2019-06-21 11:47:17,947 - root - INFO - Deep SVDD objective: one-class
+2019-06-21 11:47:17,947 - root - INFO - Nu-paramerter: 0.10
+2019-06-21 11:47:17,979 - root - INFO - Computation device: cuda
+2019-06-21 11:47:17,979 - root - INFO - Number of dataloader workers: 16
+2019-06-21 11:47:27,868 - root - INFO - Pretraining: True
+2019-06-21 11:47:27,868 - root - INFO - Pretraining optimizer: adam
+2019-06-21 11:47:27,868 - root - INFO - Pretraining learning rate: 0.0001
+2019-06-21 11:47:27,868 - root - INFO - Pretraining epochs: 2
+2019-06-21 11:47:27,868 - root - INFO - Pretraining learning rate scheduler milestones: [50]
+2019-06-21 11:47:27,868 - root - INFO - Pretraining batch size: 200
+2019-06-21 11:47:27,868 - root - INFO - Pretraining weight decay: 0.0005
+2019-06-21 11:47:29,971 - root - INFO - Starting pretraining...
+2019-06-21 11:47:33,343 - root - INFO -   Epoch 1/2	 Time: 3.372	 Loss: 12.15694988
+2019-06-21 11:47:36,449 - root - INFO -   Epoch 2/2	 Time: 3.106	 Loss: 7.83186128
+2019-06-21 11:47:36,450 - root - INFO - Pretraining time: 6.478
+2019-06-21 11:47:36,450 - root - INFO - Finished pretraining.
+2019-06-21 11:47:36,450 - root - INFO - Testing autoencoder...
+2019-06-21 11:47:38,435 - root - INFO - Test set Loss: 9.29181943
+2019-06-21 11:47:38,505 - root - INFO - Test set AUC: 74.46%
+2019-06-21 11:47:38,506 - root - INFO - Autoencoder testing time: 2.056
+2019-06-21 11:47:38,506 - root - INFO - Finished testing autoencoder.
+2019-06-21 11:47:38,509 - root - INFO - Training optimizer: adam
+2019-06-21 11:47:38,510 - root - INFO - Training learning rate: 0.0001
+2019-06-21 11:47:38,510 - root - INFO - Training epochs: 2
+2019-06-21 11:47:38,510 - root - INFO - Training learning rate scheduler milestones: [50]
+2019-06-21 11:47:38,510 - root - INFO - Training batch size: 200
+2019-06-21 11:47:38,510 - root - INFO - Training weight decay: 5e-07
+2019-06-21 11:47:38,510 - root - INFO - Initializing center c...
+2019-06-21 11:47:40,065 - root - INFO - Center c initialized.
+2019-06-21 11:47:40,065 - root - INFO - Starting training...
+2019-06-21 11:47:42,253 - root - INFO -   Epoch 1/2	 Time: 2.188	 Loss: 0.72287164
+2019-06-21 11:47:44,430 - root - INFO -   Epoch 2/2	 Time: 2.177	 Loss: 0.15676613
+2019-06-21 11:47:44,430 - root - INFO - Training time: 4.365
+2019-06-21 11:47:44,430 - root - INFO - Finished training.
+2019-06-21 11:47:44,431 - root - INFO - Starting testing...
+2019-06-21 11:47:45,961 - root - INFO - Testing time: 1.530
+2019-06-21 11:47:46,030 - root - INFO - Test set AUC: 94.45%
+2019-06-21 11:47:46,031 - root - INFO - Finished testing.
+2019-06-21 13:33:15,467 - root - INFO - Log file is ../log/hits_test/log.txt.
+2019-06-21 13:33:15,467 - root - INFO - Data path is ../../datasets/HiTS2013_300k_samples.pkl.
+2019-06-21 13:33:15,467 - root - INFO - Export path is ../log/hits_test.
+2019-06-21 13:33:15,467 - root - INFO - Dataset: hits
+2019-06-21 13:33:15,468 - root - INFO - Normal class: 1
+2019-06-21 13:33:15,468 - root - INFO - Network: hits_LeNet
+2019-06-21 13:33:15,468 - root - INFO - Deep SVDD objective: one-class
+2019-06-21 13:33:15,468 - root - INFO - Nu-paramerter: 0.10
+2019-06-21 13:33:15,501 - root - INFO - Computation device: cuda
+2019-06-21 13:33:15,501 - root - INFO - Number of dataloader workers: 16
+2019-06-21 13:33:29,711 - root - INFO - Loading model from ../log/hits_test/model.tar.
+2019-06-21 13:33:29,711 - root - INFO - Starting testing...
+2019-06-21 13:33:31,908 - root - INFO - Testing time: 2.196
+2019-06-21 13:33:31,980 - root - INFO - Test set AUC: 94.45%
+2019-06-21 13:33:31,980 - root - INFO - Finished testing.
+2019-06-21 13:37:45,455 - root - INFO - Log file is ../log/hits_test/log.txt.
+2019-06-21 13:37:45,455 - root - INFO - Data path is ../../datasets/HiTS2013_300k_samples.pkl.
+2019-06-21 13:37:45,455 - root - INFO - Export path is ../log/hits_test.
+2019-06-21 13:37:45,455 - root - INFO - Dataset: hits
+2019-06-21 13:37:45,455 - root - INFO - Normal class: 1
+2019-06-21 13:37:45,455 - root - INFO - Network: hits_LeNet
+2019-06-21 13:37:45,455 - root - INFO - Deep SVDD objective: one-class
+2019-06-21 13:37:45,455 - root - INFO - Nu-paramerter: 0.10
+2019-06-21 13:37:45,489 - root - INFO - Computation device: cuda
+2019-06-21 13:37:45,489 - root - INFO - Number of dataloader workers: 16
+2019-06-21 13:37:57,418 - root - INFO - Loading model from ../log/hits_test/model.tar.
+2019-06-21 13:37:57,418 - root - INFO - Starting testing...
+2019-06-21 13:37:59,502 - root - INFO - Testing time: 2.083
+2019-06-21 13:37:59,584 - root - INFO - Test set AUC: 94.45%
+2019-06-21 13:37:59,584 - root - INFO - Finished testing.
+2019-06-21 14:00:39,739 - root - INFO - Log file is ../log/hits_test/log.txt.
+2019-06-21 14:00:39,740 - root - INFO - Data path is ../../datasets/HiTS2013_300k_samples.pkl.
+2019-06-21 14:00:39,740 - root - INFO - Export path is ../log/hits_test.
+2019-06-21 14:00:39,740 - root - INFO - Dataset: hits
+2019-06-21 14:00:39,740 - root - INFO - Normal class: 1
+2019-06-21 14:00:39,740 - root - INFO - Network: hits_LeNet
+2019-06-21 14:00:39,740 - root - INFO - Deep SVDD objective: one-class
+2019-06-21 14:00:39,740 - root - INFO - Nu-paramerter: 0.10
+2019-06-21 14:00:39,753 - root - INFO - Computation device: cuda
+2019-06-21 14:00:39,753 - root - INFO - Number of dataloader workers: 16
+2019-06-21 14:00:51,742 - root - INFO - Loading model from ../log/hits_test/model.tar.
+2019-06-21 14:00:51,743 - root - INFO - Starting testing...
+2019-06-21 14:00:53,683 - root - INFO - Testing time: 1.940
+2019-06-21 14:00:53,768 - root - INFO - Test set AUC: 94.45%
+2019-06-21 14:00:53,768 - root - INFO - Finished testing.
+2019-06-21 14:04:04,940 - root - INFO - Log file is ../log/hits_test/log.txt.
+2019-06-21 14:04:04,940 - root - INFO - Data path is ../../datasets/HiTS2013_300k_samples.pkl.
+2019-06-21 14:04:04,940 - root - INFO - Export path is ../log/hits_test.
+2019-06-21 14:04:04,940 - root - INFO - Dataset: hits
+2019-06-21 14:04:04,940 - root - INFO - Normal class: 1
+2019-06-21 14:04:04,940 - root - INFO - Network: hits_LeNet
+2019-06-21 14:04:04,940 - root - INFO - Deep SVDD objective: one-class
+2019-06-21 14:04:04,940 - root - INFO - Nu-paramerter: 0.10
+2019-06-21 14:04:04,947 - root - INFO - Computation device: cuda
+2019-06-21 14:04:04,947 - root - INFO - Number of dataloader workers: 16
+2019-06-21 15:56:31,169 - root - INFO - Log file is ../log/hits_test/log.txt.
+2019-06-21 15:56:31,169 - root - INFO - Data path is ../../datasets/HiTS2013_300k_samples.pkl.
+2019-06-21 15:56:31,169 - root - INFO - Export path is ../log/hits_test.
+2019-06-21 15:56:31,169 - root - INFO - Dataset: hits
+2019-06-21 15:56:31,169 - root - INFO - Normal class: 1
+2019-06-21 15:56:31,170 - root - INFO - Network: hits_LeNet
+2019-06-21 15:56:31,170 - root - INFO - Deep SVDD objective: one-class
+2019-06-21 15:56:31,170 - root - INFO - Nu-paramerter: 0.10
+2019-06-21 15:56:31,188 - root - INFO - Computation device: cuda
+2019-06-21 15:56:31,188 - root - INFO - Number of dataloader workers: 16
+2019-06-21 16:21:36,481 - root - INFO - Log file is ../log/hits_test/log.txt.
+2019-06-21 16:21:36,482 - root - INFO - Data path is ../../datasets/HiTS2013_300k_samples.pkl.
+2019-06-21 16:21:36,482 - root - INFO - Export path is ../log/hits_test.
+2019-06-21 16:21:36,482 - root - INFO - Dataset: hits
+2019-06-21 16:21:36,482 - root - INFO - Normal class: 1
+2019-06-21 16:21:36,482 - root - INFO - Network: hits_LeNet
+2019-06-21 16:21:36,482 - root - INFO - Deep SVDD objective: one-class
+2019-06-21 16:21:36,482 - root - INFO - Nu-paramerter: 0.10
+2019-06-21 16:21:36,500 - root - INFO - Computation device: cuda
+2019-06-21 16:21:36,500 - root - INFO - Number of dataloader workers: 16
+2019-06-21 16:21:48,182 - root - INFO - Loading model from ../log/hits_test/model.tar.
+2019-06-21 16:21:48,183 - root - INFO - Starting testing...
+2019-06-21 16:21:49,885 - root - INFO - Testing time: 1.702
+2019-06-21 16:21:49,967 - root - INFO - Test set AUC: 94.45%
+2019-06-21 16:21:49,967 - root - INFO - Finished testing.
+2019-06-21 16:28:05,550 - root - INFO - Log file is ../log/hits_test/log.txt.
+2019-06-21 16:28:05,550 - root - INFO - Data path is ../../datasets/HiTS2013_300k_samples.pkl.
+2019-06-21 16:28:05,550 - root - INFO - Export path is ../log/hits_test.
+2019-06-21 16:28:05,550 - root - INFO - Dataset: hits
+2019-06-21 16:28:05,550 - root - INFO - Normal class: 1
+2019-06-21 16:28:05,550 - root - INFO - Network: hits_LeNet
+2019-06-21 16:28:05,550 - root - INFO - Deep SVDD objective: one-class
+2019-06-21 16:28:05,550 - root - INFO - Nu-paramerter: 0.10
+2019-06-21 16:28:05,566 - root - INFO - Computation device: cuda
+2019-06-21 16:28:05,566 - root - INFO - Number of dataloader workers: 16
+2019-06-21 16:28:17,364 - root - INFO - Loading model from ../log/hits_test/model.tar.
+2019-06-21 16:28:17,365 - root - INFO - Starting testing...
+2019-06-21 16:28:19,057 - root - INFO - Testing time: 1.692
+2019-06-21 16:28:19,141 - root - INFO - Test set AUC: 94.45%
+2019-06-21 16:28:19,141 - root - INFO - Finished testing.
+2019-06-21 16:31:16,277 - root - INFO - Log file is ../log/hits_test/log.txt.
+2019-06-21 16:31:16,277 - root - INFO - Data path is ../../datasets/HiTS2013_300k_samples.pkl.
+2019-06-21 16:31:16,277 - root - INFO - Export path is ../log/hits_test.
+2019-06-21 16:31:16,277 - root - INFO - Dataset: hits
+2019-06-21 16:31:16,277 - root - INFO - Normal class: 1
+2019-06-21 16:31:16,277 - root - INFO - Network: hits_LeNet
+2019-06-21 16:31:16,277 - root - INFO - Deep SVDD objective: one-class
+2019-06-21 16:31:16,277 - root - INFO - Nu-paramerter: 0.10
+2019-06-21 16:31:16,295 - root - INFO - Computation device: cuda
+2019-06-21 16:31:16,295 - root - INFO - Number of dataloader workers: 16

@@ -27,6 +27,9 @@ DataSets/
 *.mp4
 *.pkl
 *.pickle
+*.txt
+*.json
+*.tar
 
 
 # C extensions
