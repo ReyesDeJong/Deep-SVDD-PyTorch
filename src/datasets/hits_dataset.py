@@ -53,7 +53,7 @@ class HitsDataset(TorchvisionDataset):
                             transform=transform,
                             target_transform=target_transform)
     val_idx_normal = get_target_label_idx(
-        np.array(self.val_all_set_set.label_arr), self.normal_classes)
+        np.array(self.val_all_set.label_arr), self.normal_classes)
     self.val_normal_set = Subset(self.val_all_set, val_idx_normal)
     print(self.val_normal_set.__len__())
 

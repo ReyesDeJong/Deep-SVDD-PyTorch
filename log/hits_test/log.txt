@@ -1651,3 +1651,50 @@
 2019-06-21 16:44:31,274 - root - INFO - Testing time: 2.044
 2019-06-21 16:44:31,357 - root - INFO - Test set AUC: 71.92%
 2019-06-21 16:44:31,357 - root - INFO - Finished testing.
+2019-06-21 18:11:08,142 - root - INFO - Log file is ../log/hits_test/log.txt.
+2019-06-21 18:11:08,142 - root - INFO - Data path is ../../datasets/HiTS2013_300k_samples.pkl.
+2019-06-21 18:11:08,142 - root - INFO - Export path is ../log/hits_test.
+2019-06-21 18:11:08,142 - root - INFO - Dataset: hits
+2019-06-21 18:11:08,142 - root - INFO - Normal class: 1
+2019-06-21 18:11:08,142 - root - INFO - Network: hits_LeNet
+2019-06-21 18:11:08,142 - root - INFO - Deep SVDD objective: soft-boundary
+2019-06-21 18:11:08,142 - root - INFO - Nu-paramerter: 0.10
+2019-06-21 18:11:08,160 - root - INFO - Computation device: cuda
+2019-06-21 18:11:08,160 - root - INFO - Number of dataloader workers: 16
+2019-06-21 18:11:37,324 - root - INFO - Log file is ../log/hits_test/log.txt.
+2019-06-21 18:11:37,324 - root - INFO - Data path is ../../datasets/HiTS2013_300k_samples.pkl.
+2019-06-21 18:11:37,325 - root - INFO - Export path is ../log/hits_test.
+2019-06-21 18:11:37,325 - root - INFO - Dataset: hits
+2019-06-21 18:11:37,325 - root - INFO - Normal class: 1
+2019-06-21 18:11:37,325 - root - INFO - Network: hits_LeNet
+2019-06-21 18:11:37,325 - root - INFO - Deep SVDD objective: soft-boundary
+2019-06-21 18:11:37,325 - root - INFO - Nu-paramerter: 0.10
+2019-06-21 18:11:37,329 - root - INFO - Computation device: cuda
+2019-06-21 18:11:37,329 - root - INFO - Number of dataloader workers: 16
+2019-06-21 18:11:47,381 - root - INFO - Pretraining: True
+2019-06-21 18:11:47,381 - root - INFO - Pretraining optimizer: adam
+2019-06-21 18:11:47,381 - root - INFO - Pretraining learning rate: 0.0001
+2019-06-21 18:11:47,381 - root - INFO - Pretraining epochs: 150
+2019-06-21 18:11:47,381 - root - INFO - Pretraining learning rate scheduler milestones: [50]
+2019-06-21 18:11:47,381 - root - INFO - Pretraining batch size: 200
+2019-06-21 18:11:47,381 - root - INFO - Pretraining weight decay: 0.0005
+2019-06-21 18:11:49,455 - root - INFO - Starting pretraining...
+2019-06-21 18:11:52,272 - root - INFO -   Epoch 1/150	 Time: 2.817	 Loss: 11.54416211
+2019-06-21 18:11:54,823 - root - INFO -   Epoch 2/150	 Time: 2.551	 Loss: 7.62552868
+2019-06-21 18:11:57,347 - root - INFO -   Epoch 3/150	 Time: 2.524	 Loss: 7.19054726
+2019-06-21 18:11:59,868 - root - INFO -   Epoch 4/150	 Time: 2.520	 Loss: 7.02046041
+2019-06-21 18:12:02,391 - root - INFO -   Epoch 5/150	 Time: 2.523	 Loss: 6.93275627
+2019-06-21 18:12:04,956 - root - INFO -   Epoch 6/150	 Time: 2.565	 Loss: 6.88102706
+2019-06-21 18:12:07,520 - root - INFO -   Epoch 7/150	 Time: 2.563	 Loss: 6.83350440
+2019-06-21 18:12:10,057 - root - INFO -   Epoch 8/150	 Time: 2.537	 Loss: 6.79780482
+2019-06-21 18:12:12,610 - root - INFO -   Epoch 9/150	 Time: 2.553	 Loss: 6.76653352
+2019-06-21 18:12:15,138 - root - INFO -   Epoch 10/150	 Time: 2.528	 Loss: 6.74306654
+2019-06-21 18:12:17,677 - root - INFO -   Epoch 11/150	 Time: 2.538	 Loss: 6.71290106
+2019-06-21 18:12:20,235 - root - INFO -   Epoch 12/150	 Time: 2.557	 Loss: 6.69142326
+2019-06-21 18:12:22,767 - root - INFO -   Epoch 13/150	 Time: 2.532	 Loss: 6.67758083
+2019-06-21 18:12:25,315 - root - INFO -   Epoch 14/150	 Time: 2.547	 Loss: 6.65893538
+2019-06-21 18:12:27,895 - root - INFO -   Epoch 15/150	 Time: 2.580	 Loss: 6.63611970
+2019-06-21 18:12:30,549 - root - INFO -   Epoch 16/150	 Time: 2.654	 Loss: 6.62096434
+2019-06-21 18:12:33,190 - root - INFO -   Epoch 17/150	 Time: 2.641	 Loss: 6.60750883
+2019-06-21 18:12:35,887 - root - INFO -   Epoch 18/150	 Time: 2.696	 Loss: 6.59133475
+2019-06-21 18:12:38,457 - root - INFO -   Epoch 19/150	 Time: 2.570	 Loss: 6.57837136

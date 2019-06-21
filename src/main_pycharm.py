@@ -188,7 +188,7 @@ if __name__ == '__main__':
     'data_path': '../../datasets/HiTS2013_300k_samples.pkl',
     'load_config': None,
     'load_model': None,
-    'objective': 'one-class',
+    'objective': 'soft-boundary',
     'nu': 0.1,
     'device': 'cuda',
     'seed': -1,
